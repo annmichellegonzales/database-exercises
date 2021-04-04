@@ -4,6 +4,8 @@ USE employees;
 
 -- SELECT CONCAT(first_name, ' ', last_name) FROM employees WHERE last_name LIKE 'E%' ORDER BY last_name DESC;
 
+SELECT * FROM employees WHERE MONTH(birth_date) = 12 AND DAY(birth_date) = 25;
+
 -- SELECT * FROM employees WHERE last_name LIKE '%q%';
 --
 -- SELECT * FROM employees WHERE first_name = 'Irena' OR first_name = 'Vidya' OR first_name = 'Maya';
@@ -36,13 +38,13 @@ USE employees;
 -- ORDER BY last_name DESC;
 
 
-SELECT @@GLOBAL.sql_mode;
-SELECT @@SESSION.sql_mode;
-
-SET SESSION sql_mode = 'STRICT_TRANS_TABLES, NO_ENGINE_SUBSTITUTION';
-
-SELECT *
-FROM employees
-WHERE first_name = 'Irena'
-GROUP BY gender;
+-- SELECT @@GLOBAL.sql_mode;
+-- SELECT @@SESSION.sql_mode;
+--
+-- SET SESSION sql_mode = 'STRICT_TRANS_TABLES, NO_ENGINE_SUBSTITUTION';
+--
+-- SELECT *
+-- FROM employees
+-- WHERE first_name = 'Irena'
+-- GROUP BY gender;
 
